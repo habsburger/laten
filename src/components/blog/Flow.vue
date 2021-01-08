@@ -39,6 +39,7 @@
 <script>
 import { pretty } from "@/plugins/utils/pretty";
 import { scroll } from "@/plugins/utils/scroll";
+import { isMobile } from "@/plugins/device";
 
 export default {
   name: "Flow",
@@ -92,10 +93,10 @@ export default {
       return this.filters.post;
     },
     scrollDelay() {
-      return this.$device.phone ? 0 : 560;
+      return this.isMobile() ? 0 : 560;
     },
     figureClass() {
-      return { "preview__figure--mobile": this.$device.phone && this.reading };
+      return { "preview__figure--mobile": this.isMobile() && this.reading };
     },
     feed() {
       const filterBy = {
@@ -115,6 +116,7 @@ export default {
   methods: {
     pretty,
     scroll,
+    isMobile,
     getBgImg(src) {
       return { backgroundImage: `url(${src})` };
     }
