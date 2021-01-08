@@ -6,11 +6,11 @@
   padding-top: 6.25rem;
   overflow-x: hidden;
 
-  @media (--tablet) {
+  @media only screen and (min-width: 568px) {
     padding: 7.5rem 0;
   }
 
-  @media (--desktop) {
+  @media only screen and (min-width: 1280px) {
     padding: 7.5rem 2.5rem 6.5vw;
 
     &--reading {
@@ -18,7 +18,7 @@
     }
   }
 
-  @media (--monitor) {
+  @media only screen and (min-width: 1448px) {
     padding: 7.5rem 0 6.5vw;
 
     &--reading {
@@ -37,7 +37,7 @@
       padding: 0 1.25rem;
     }
 
-    @media (--monitor) {
+    @media only screen and (min-width: 1448px) {
       padding: 0;
     }
   }
@@ -50,21 +50,21 @@
     align-items: center;
     padding: 0 2.5rem;
 
-    @media (--tablet) {
+    @media only screen and (min-width: 568px) {
       position: absolute;
       bottom: 0;
       left: 0;
     }
 
-    @media (--laptop) {
+    @media only screen and (min-width: 1025px) {
       justify-content: flex-start;
     }
 
-    @media (--desktop) {
+    @media only screen and (min-width: 1280px) {
       padding: 0 6.25rem;
     }
 
-    @media (--monitor) {
+    @media only screen and (min-width: 1448px) {
       padding: 0 2.5rem;
     }
 
@@ -73,7 +73,7 @@
       width: 15rem;
       text-align: center;
 
-      @media (--tablet) {
+      @media only screen and (min-width: 568px) {
         width: 18rem;
       }
     }

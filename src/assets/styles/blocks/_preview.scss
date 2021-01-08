@@ -4,16 +4,16 @@
   z-index: 0;
   @include imagePlaceholder;
 
-  @media (--tablet) {
+  @media only screen and (min-width: 568px) {
     width: calc(50% - 2.5rem);
     margin: 1.25rem 1.25rem 2.5rem;
   }
 
-  @media (--laptop) {
+  @media only screen and (min-width: 1025px) {
     width: calc(100% / 3 - 2.5rem);
   }
 
-  @media (--desktop) {
+  @media only screen and (min-width: 1280px) {
     width: calc(100% / 3 - 5rem);
     margin: 1rem;
   }
@@ -78,7 +78,7 @@
       background-color: cc(shadow, .65);
     }
 
-    @media (--monitor) {
+    @media only screen and (min-width: 1448px) {
       padding-right: 1.5rem;
     }
   }
@@ -90,7 +90,7 @@
     padding: .5rem 0;
     font-size: .9rem;
 
-    @media (--tablet) {
+    @media only screen and (min-width: 568px) {
       white-space: nowrap;
     }
   }

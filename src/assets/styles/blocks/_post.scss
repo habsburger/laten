@@ -12,7 +12,7 @@
     transform: translate3d(100%, 0, 0);
   }
 
-  @media (--laptop) {
+  @media only screen and (min-width: 1025px) {
     position: fixed;
     top: 0;
     left: calc(100% / 3 + 3.25rem);
@@ -31,13 +31,13 @@
     }
   }
 
-  @media (--monitor) {
+  @media only screen and (min-width: 1448px) {
     width: 62rem;
     left: calc(50% - 12rem);
   }
 
   &__header {
-    @media (--tablet) {
+    @media only screen and (min-width: 568px) {
       position: absolute;
       bottom: 100%;
       right: 0;
@@ -49,7 +49,7 @@
       padding-bottom: 2.5rem;
     }
 
-    @media (--laptop) {
+    @media only screen and (min-width: 1025px) {
       position: static;
       width: auto;
       height: auto;
@@ -63,7 +63,7 @@
     @extend %txt--title;
     display: none;
 
-    @media (--tablet) {
+    @media only screen and (min-width: 568px) {
       display: block;
       color: cc(txt, alt);
       margin-bottom: .75rem;
@@ -74,14 +74,14 @@
   &__meta {
     display: none;
 
-    @media (--tablet) {
+    @media only screen and (min-width: 568px) {
       display: block;
       margin-bottom: 1.25rem;
       padding-left: 1.25rem;
       padding-bottom: 1.25rem;
     }
 
-    @media (--laptop) {
+    @media only screen and (min-width: 1025px) {
       border-bottom: 1px solid cc(border);
     }
   }
@@ -95,7 +95,7 @@
     display: block;
     height: .625rem;
 
-    @media (--laptop) {
+    @media only screen and (min-width: 1025px) {
       display: inline-block;
       margin: 0 .5rem;
 
@@ -113,11 +113,11 @@
     justify-content: center;
     padding: 0 2.5rem 1.25rem 2.5rem;
 
-    @media (--tablet) {
+    @media only screen and (min-width: 568px) {
       padding-top: 1.25rem;
     }
 
-    @media (--laptop) {
+    @media only screen and (min-width: 1025px) {
       padding-right: 7.5rem;
     }
   }
@@ -126,7 +126,7 @@
     padding: 1.25rem 1.25rem 3.75rem;
     border-bottom: 1px solid cc(border);
 
-    @media (--laptop) {
+    @media only screen and (min-width: 1025px) {
       padding: 0 1.25rem 2.5rem;
     }
   }
