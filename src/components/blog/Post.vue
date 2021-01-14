@@ -20,8 +20,10 @@
 </template>
 
 <script>
+import { pretty } from "@/plugins/utils/pretty";
+
 export default {
-  name: "Posts",
+  name: "Post",
   props: {
     post: String
   },
@@ -33,6 +35,29 @@ export default {
       published: "",
       description: ""
     };
+  },
+  methods: {
+    pretty
+  },
+  beforeMount() {
+    // if (!this.post) return;
+    this.title = "How To Install And Deploy This Template";
+    this.author = "song";
+    this.content =
+      "Guide to installing and deploying this template in seconds\n" +
+      "\n" +
+      "A simple Vue.js template for creating a fast, beautiful blog on Netlify with a continuous deployment workflow and Cosmic JS CMS for content editing.\n" +
+      "\n" +
+      "This template provides blog, blog posts, authors and elegant modern design ready to deploy on Netlify in one click!\n" +
+      "\n" +
+      "Getting Started\n" +
+      "\n" +
+      "Below are steps to deploy your application to Netlify and integrate with Cosmic JS for content editing.\n" +
+      "\n" +
+      "1. Deploy to Netlify\n" +
+      "Click the button below to deploy this application to Netlify. By default, it will be connected to the a demo Cosmic JS Bucket.";
+    this.published = "2018-01-05T16:01:22.011Z";
+    this.description = "caonima";
   }
 };
 </script>

@@ -1,7 +1,8 @@
 <template>
-  <main class="blog">
+  <main class="blog" :class="{ 'blog--reading': this.post }">
     <navbar :content="content" :filters="filters" :navs="navs"></navbar>
     <flow :filters="filters"></flow>
+    <post :post="post"></post>
     <Footer></Footer>
   </main>
 </template>
@@ -12,19 +13,24 @@
 import Navbar from "@/components/blog/Navbar";
 import Footer from "@/components/blog/Footer";
 import Flow from "@/components/blog/Flow";
+import Post from "@/components/blog/Post";
 
 export default {
   name: "Home",
-  components: { Flow, Footer, Navbar },
+  components: { Post, Flow, Footer, Navbar },
   data() {
     return {
       navs: 0,
-      title: "Latent",
-      label: {
+      title: "Laten",
+      labels: {
         post: "",
         author: "Song"
       }
     };
+  },
+  props: {
+    post: String,
+    author: String
   },
   computed: {
     content() {
@@ -36,6 +42,12 @@ export default {
       if (this.author) filters.author = this.author;
       return filters;
     }
-  }
+  },
+  watch: {
+    "$route.name"(to, from) {
+      if (to !== from) this.navs++;
+    }
+  },
+  beforeMount() {}
 };
 </script>

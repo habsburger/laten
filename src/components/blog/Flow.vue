@@ -10,7 +10,7 @@
           <figcaption v-if="!reading" class="preview__details">
             <router-link
               class="preview__title"
-              :to="`/read/${post.id}`"
+              :to="`/post/${post.id}`"
               @click.native="scroll(0, 220, scrollDelay)"
             >
               {{ post.title }}
@@ -65,7 +65,7 @@ export default {
           title: "How to Install and Deploy This Template",
           author: "song",
           image:
-            "https://imgix.cosmicjs.com/e2aa6260-9c1a-11e8-ab14-4dbdf8b00519-netlify.png",
+            "https://imgix.cosmicjs.com/7f787a60-ebcb-11e7-a759-f9eda9745d97-pexels-photo-748777.jpeg",
           published: "2018-01-05T16:01:22.011Z"
         },
         {
@@ -73,7 +73,7 @@ export default {
           title: "How to Install and Deploy This Template",
           author: "song",
           image:
-            "https://imgix.cosmicjs.com/e2aa6260-9c1a-11e8-ab14-4dbdf8b00519-netlify.png",
+            "https://imgix.cosmicjs.com/f456a320-ebc6-11e7-84a7-7367c605d42b-pexels-photo-577585.jpeg",
           published: "2018-01-05T16:01:22.011Z"
         },
         {

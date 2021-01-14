@@ -31,9 +31,10 @@ export default {
   },
   computed: {
     labels() {
-      return Object.keys(this.filters).map(
-        filter => this.content.labels[filter]
-      );
+      // return Object.keys(this.filters).map(
+      //   filter => this.content.labels[filter]
+      // );
+      return ["草泥马"];
     }
   },
   methods: {
